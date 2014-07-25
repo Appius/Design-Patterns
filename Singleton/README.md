@@ -1,6 +1,6 @@
 Singleton
 ========
-Ensure a class only has one instance, and provide a global point of access to it. His implementation ensuring a unique instance.
+Ensure a class only has one instance, and provide a global point of access to it. His implementation ensures a unique instance.
 Applicability
 --------------
 Use the singleton pattern when:
