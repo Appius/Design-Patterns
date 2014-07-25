@@ -9,10 +9,10 @@ Structure
 Applicability
 -------------
 Use the Abstract Factory pattern when
-* a sy stem should be independent of how its products are created, composed, and represented;
-* a sy stem should be configured with one of multiple families of products;
+* a system should be independent of how its products are created, composed, and represented;
+* a system should be configured with one of multiple families of products;
 * a family of related product objects is designed to be used together, and you need to enforce this constraint;
-• y ou want to provide a class library of products, and y ou want to reveal just their interfaces, not their implementations;
+* you want to provide a class library of products, and you want to reveal just their interfaces, not their implementations;
 
 
 Абстрактная фабрика
