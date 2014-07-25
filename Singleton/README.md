@@ -7,7 +7,7 @@ Use the singleton pattern when:
 * there must be exactly one instance of a class, and it must be accessible to clients from a well-known access point.
 * when the sole instance should be extensible by subclassing, and clients should be able to use an extended instance without modifying their code.
 
-Versions:
+Versions
 -----------
 1. **Not thread-safe**. Two different threads could both have evaluated the test if (instance==null) and found it to be true, then both create instances, which violates the singleton pattern. Note that in fact the instance may already have been created before the expression is evaluated, but the memory model doesn't guarantee that the new value of instance will be seen by other threads unless suitable memory barriers have been passed.
 2. **Simple thread-safety**. This implementation is thread-safe. The thread takes out a lock on a shared object, and then checks whether or not the instance has been created before creating the instance. This takes care of the memory barrier issue (as locking makes sure that all reads occur logically after the lock acquire, and unlocking makes sure that all writes occur logically before the lock release) and ensures that only one thread will create an instance (as only one thread can be in that part of the code at a time - by the time the second thread enters it, the first thread will have created the instance, so the expression will evaluate to false). Unfortunately, performance suffers as a lock is acquired every time the instance is requested.
@@ -34,7 +34,7 @@ Versions:
 * должен быть ровно один экземпляр некоторого класса, легко доступный всем клиентам;
 * единственный экземпляр должен расширяться путем порождения подклассов, и клиентам нужно имекть возможность работать с расширенным экзмемпляром без модификации своего кода.
 
-Разные версии реализации шаблона:
+Разные версии реализации шаблона
 -------------------------------------------------
 1. **Не потоко-безопасная**. Наиболее простоя реализация паттерна, неустойчивая к наличию 2 и более одновременно работающих потоков. При такой ситуации, если два потока одновременно проверят сущность на нулевое значение, тогда будет создано два экземпляра класса, что полностью противоречит замыслу.
 2. **Простая потоко-безопасная**. Данная версия работает всегда, но имеет существенные недостатки производительности: только один поток может получить значение в один момент времени, это гарантируется структурой lock.
