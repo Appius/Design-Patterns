@@ -1,5 +1,20 @@
 Bridge
 ======
+Decouple an abstraction from its implementation so that the two can vary independently.
+
+Structure
+---------
+<img src="image.png" />
+
+Applicability
+-------------
+Use the Bridge pattern when:
+* you want to avoid a permanent binding between an abstraction and its implementation. This might be the case, for example, when the implementation must be selected or switched at run-time;
+* both the abstractions and their implementations should be extensible by subclassing. In this case, the **Bridge pattern** lets you combine the different abstractions and implementations and extend them independently;
+* changes in the implementation of an abstraction should have no impact on clients; that is, their code should not have to be recompiled;
+* *(C++)* you want to hide the implementation of an abstraction completely from clients. In C++ the representation of a class is visible in the class interface;
+* you have a proliferation of classes. Such a class hierarchy indicates the need for splitting an object into two parts;
+* you want to share an implementation among multiple objects (perhaps using reference counting), and this fact should be hidden from the client.
 
 Мост
 ====
@@ -7,7 +22,14 @@ Bridge
 
 Структура
 ---------
-<img scr="image.png" />
+<img src="image.png" />
 
 Применимость
 ------------
+Используйте паттерн мост, когда:
+* хотите избежать постоянной привязки обстракции к реализации. Так, например, бывает, когда реализацию нобходимо выбирать во время выполнения программы;
+* и абстрации, и реализации должны расширяться новыми подклассами. В таком слае паттерн **мост** позволяет комбинровать разные абстракции и реализации и изменять из независимо;
+* изменения в реализации абстрации не должны сказываться на клиентах, то есть клиентский код не должен перекомпилироваться;
+* *(только для С++)* вы хотите полностью скрыть от клиентов реализацию абстракции. В С++ представление класса видимо через его интерфейс;
+* число классов начинает быстро расти. Это признак того, что иерархию следует разделить на две части;
+* вы хотите разделить одну реализацию между несколькими объектами (быть может, применяя подсчет ссылок), а этот факт необходимо скрыть от клиента.
