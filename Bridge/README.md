@@ -22,7 +22,7 @@ Use the Bridge pattern when:
 
 Структура
 ---------
-<img scr="image.png" />
+<img src="image.png" />
 
 Применимость
 ------------
